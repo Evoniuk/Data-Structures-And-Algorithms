@@ -10,8 +10,8 @@ function quicksort(arr) {
 function partition(arr, low, high) {
   let pivot = arr[(low + high) >> 1];
   while (low <= high) {
-    while (arr[low] % 7 < pivot % 7) low++;
-    while (pivot % 7 < arr[high] % 7) high--;
+    while (arr[low] < pivot) low++;
+    while (pivot < arr[high]) high--;
     if (low <= high) swap(arr, low++, high--);
   }
   return low
