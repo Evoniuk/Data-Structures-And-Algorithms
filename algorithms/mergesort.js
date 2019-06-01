@@ -15,7 +15,7 @@ function merge(arr, helper, low, middle, high) {
   let helperLeft = low, helperRight = middle + 1;
   let current = low;
   while (helperLeft <= middle && helperRight <= high) {
-    if (helper[helperLeft] % 7 <= helper[helperRight] % 7) arr[current++] = helper[helperLeft++];
+    if (helper[helperLeft] <= helper[helperRight]) arr[current++] = helper[helperLeft++];
     else arr[current++] = helper[helperRight++];
   }
   let remaining = middle - helperLeft;
