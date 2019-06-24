@@ -12,13 +12,7 @@ function partition(arr, low, high) {
   while (low <= high) {
     while (arr[low] < pivot) low++;
     while (pivot < arr[high]) high--;
-    if (low <= high) swap(arr, low++, high--);
+    if (low <= high) [arr[low++], arr[high--]] = [arr[high], arr[low]];
   }
   return low
-}
-
-function swap(arr, left, right) {
-  let temp = arr[left];
-  arr[left] = arr[right];
-  arr[right] = temp
 }
