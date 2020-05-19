@@ -16,7 +16,7 @@ function isPowerOfTwo(num) {
 
 function countSetBits(n) {
   for (let count = 0;; count++) {
-    if (n == 0) return count;
+    if (n === 0) return count;
     n &= n - 1;
   }
 }
